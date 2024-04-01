@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>首页</title>
+    <style>        
+        body{ 
+          background-image: url('images/background.png');
+              background-repeat: no-repeat;
+             background-attachment: fixed;
+                background-size: 100% 100%;
+            
+     }
+        
+         .logo {
+            position: absolute;
+            left: 0px;
+            
+        }
+       
+        
+        #navbar .logo img {
+            width: 180px; /* 修改图片宽度 */
+            height: auto ; /* 根据宽度自动调整高度 */
+           
+            padding-left:15px;
+            padding-top:0px;
+        }
+        #navbar {
+            
+            color: #fff;
+           padding-left:200px;
+            padding-top:40px;
+        }
+        
+        #navbar ul {
+            
+            list-style-type: none;
+             margin: 0;
+            padding: 0;
+        }
+        
+        #navbar li {
+            display: inline-block;
+            margin-right: 60px;
+        }
+        
+        #navbar li:last-child {
+            margin-right: 0;
+        }
+        
+        #navbar li a {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 5px 10px;
+            font-family:方正汉真广标简体; /* 修改字体 */
+            font-size: 48px; /* 修改字体大小 */
+           
+           text-shadow:5px 4px 3px rgb(15, 6, 50);
+        }
+         #navbar a:hover {
+          text-decoration:underline;
+           font-size:50px;
+           color:#c7ebf6;
+           text-decoration-color:#95c4f7;
+           text-underline-offset: 0.23em;
+    }
+       
+        #navbar li:hover .hover-image {
+            display: block;
+            margin-left:40px;
+           
+        }
+      .hover-image {
+            display: none;
+            position: absolute;
+            top:8px;
+           
+      
+        }
+         
+       .title-image {
+        position: absolute;
+        display: flex;   
+        margin-top: 130px;
+      
+    }
+    .title-image img {
+        width: 1000px;
+        height:auto;
+        margin-left:40px;
+    }
+   
+      .logo-image {
+        position: absolute;
+        display:block;
+       
+        margin-top: 230px;
+    }
+    .logo-image img {
+        width: 300px;
+        height:auto;
+        margin-left:1100px;
+    }
+    
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="navbar">
+            <div class="logo">
+                <img src="images/EYEOCT.png" alt="Logo"/> 
+            </div>
+            <ul>
+         <li>
+            <a href="http://baidu.com">首页</a>
+            <img class="hover-image" src="images/mark.png"  alt="Hover Image" />
+        </li>
+        <li>
+            <a href="#">数据</a>
+             <img class="hover-image" src="images/mark.png"  alt="Hover Image"/>
+        </li>
+        <li>
+            <a href="#">病例</a>
+             <img class="hover-image" src="images/mark.png"  alt="Hover Image"/>
+        </li>
+        <li>
+            <a href="#">示例</a>
+             <img class="hover-image" src="images/mark.png"  alt="Hover Image"/>
+        </li>
+        <li>
+            <a href="#">科普</a>
+             <img class="hover-image" src="images/mark.png"  alt="Hover Image"/>
+        </li>
+            </ul>
+           
+        </div>
+        <div class="title-image">
+            <img src="images/title.png" alt="Image 1" />
+                <!-- 添加更多自定义图片 -->
+            </div>
+        <div class="logo-image">
+            <img src="images/logo.png" alt="Image 2"/> 
+                <!-- 添加更多自定义图片 -->
+            </div>
+
+    </form>
+</body>
+</html>
