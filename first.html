@@ -1,15 +1,11 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SY2.aspx.cs" Inherits="SY2" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <style>
-        
+    <title>首页</title>
+    <style>        
         body{ 
-            background-image: url('http://localhost:62803/images/background.png');
+          background-image: url('images/background.png');
               background-repeat: no-repeat;
              background-attachment: fixed;
                 background-size: 100% 100%;
@@ -18,21 +14,22 @@
         
          .logo {
             position: absolute;
-            left: 20px;
+            left: 0px;
+            
         }
        
         
         #navbar .logo img {
-            width: 40px; /* 修改图片宽度 */
+            width: 180px; /* 修改图片宽度 */
             height: auto ; /* 根据宽度自动调整高度 */
-            
+           
             padding-left:15px;
-            padding-top:10px;
+            padding-top:0px;
         }
         #navbar {
             
             color: #fff;
-           padding-left:60px;
+           padding-left:200px;
             padding-top:40px;
         }
         
@@ -53,36 +50,40 @@
         }
         
         #navbar li a {
-            color: #fff;
+            color: aliceblue;
             text-decoration: none;
             padding: 5px 10px;
-            font-family: 隶书; /* 修改字体 */
-            font-size: 50px; /* 修改字体大小 */
-           font-weight:bold;
-           text-shadow:2px 2px 3px black;
+            font-family:方正汉真广标简体; /* 修改字体 */
+            font-size: 48px; /* 修改字体大小 */
+           
+           text-shadow:5px 4px 3px rgb(15, 6, 50);
         }
          #navbar a:hover {
           text-decoration:underline;
-           font-size:52px;
-           color:aliceblue;
-           text-decoration-color:aqua;
+           font-size:50px;
+           color:#c7ebf6;
+           text-decoration-color:#95c4f7;
+           text-underline-offset: 0.23em;
     }
        
         #navbar li:hover .hover-image {
             display: block;
+            margin-left:40px;
            
         }
-
-        .hover-image {
+      .hover-image {
             display: none;
             position: absolute;
-            top:3px;
+            top:8px;
+           
       
         }
          
        .title-image {
+        position: absolute;
         display: flex;   
-        margin-top: 40px;
+        margin-top: 130px;
+      
     }
     .title-image img {
         width: 1000px;
@@ -91,9 +92,10 @@
     }
    
       .logo-image {
+        position: absolute;
         display:block;
        
-        margin-top: -500px;
+        margin-top: 230px;
     }
     .logo-image img {
         width: 300px;
@@ -107,11 +109,11 @@
     <form id="form1" runat="server">
         <div id="navbar">
             <div class="logo">
-                <img src="images/logo.png" alt="Logo"/> 
+                <img src="images/EYEOCT.png" alt="Logo"/> 
             </div>
             <ul>
          <li>
-            <a href="#">首页</a>
+            <a href="http://baidu.com">首页</a>
             <img class="hover-image" src="images/mark.png"  alt="Hover Image" />
         </li>
         <li>
