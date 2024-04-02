@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src='https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js'></script>
+</head>
+<body>
+<div id='male' style="width: 400px;height:400px;background-color: white;float: left;"></div>
+<div id='female' style="width: 400px;height:400px;background-color: white;float: left;"></div>
+<div id='main' style="width: 800px;height:600px;background-color: white;clear:both;"></div>
+<script type="text/javascript">
+    var maleDom = document.getElementById('male');
+    var femaleDom = document.getElementById('female');
+    var mainDom = document.getElementById('main');
+    var maleChart = echarts.init(maleDom);
+    var femaleChart = echarts.init(femaleDom);
+    var mainChart = echarts.init(mainDom);
+
+    var maleOption = {
+        title : {
+            text: '男性患病比例',
+            subtext: '79962人',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['患病'],
+            
+        },
+        
+        series : [
+            {
+                name: '男性患病比例',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                label: {
+                    fontSize: 14,
+                    formatter: '{b}: {d}%'
+                },
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                showBackground: true,
+                data:[
+                    {value: 79962 * 0.75, name:'患病', itemStyle: {color: '#c23531'}},
+                    {value: 79962 * 0.25, name:'健康', itemStyle: {opacity: 0}}
+                ]
+            }
+        ]
+    };
+
+    var femaleOption = {
+        title : {
+            text: '女性患病比例',
+            subtext: '75809人',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['患病'],
+            
+        },
+        series : [
+            {
+                name: '女性患病比例',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                label: {
+                    fontSize: 14,
+                    formatter: '{b}: {d}%',
+                    
+                },
+                showBackground: true,
+                backgroundStyle: {
+                    color: '#e8e8e8', // 背景图的颜色
+                
+                },
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)',
+                        
+                    }
+                },
+                data:[
+                    {value: 75809 * 0.72, name:'患病', itemStyle: {color: '#c23531'}},
+                    {value: 75809 * 0.28, name:'健康', itemStyle: {opacity: 0}}
+                ]
+            }
+        ]
+    };
+
+    var mainOption = {
+        xAxis: {
+            type: 'category',
+            data: ['20-29岁', '30-39岁', '40-49岁', '50-59岁', '60岁及以上'],
+            axisLine: {show: false}, // 隐藏x轴线
+            axisTick: {show: false}, // 隐藏x轴刻度
+        },
+        yAxis: {
+            type: 'value',
+            axisLine: {show: false}, // 隐藏y轴线
+            axisTick: {show: false}, // 隐藏y轴刻度
+            axisLabel: {show: false}, // 隐藏y轴标签
+            splitLine: {show: false}, // 隐藏分隔线
+        },
+        grid: {
+            backgroundColor: '#f5f5f5' // 设置网格区域的背景色
+        },
+        series: [
+            {
+                data: [49.4, 61.2, 86.3, 95.3, 97.2],
+                type: 'bar',
+                showBackground: true,
+                backgroundStyle: {
+                    color: '#e8e8e8', // 背景图的颜色
+                    borderRadius: [15, 15, 15, 15] // 背景图的圆角
+                },
+                barWidth: 30, // 设置柱形图的宽度，单位为像素
+                itemStyle: {
+                    borderRadius: [15, 15, 15, 15], // 设置柱形图的圆角
+                    color: '#61a0a8', // 设置柱形图的颜色
+                    borderColor: '#61a0a8', // 设置柱形图的边线颜色
+                    borderWidth: 2 // 设置柱形图的边线宽度
+                },
+                label: {
+                    show: true,
+                    position: 'top', // 标签显示在顶部
+                    offset: [0, -10], // 标签偏移量
+                    formatter: '{c}%' // 标签格式
+                }
+            }
+        ]
+    };
+
+    maleChart.setOption(maleOption);
+    femaleChart.setOption(femaleOption);
+
+    setTimeout(function(){
+        maleDom.style.display = 'none';
+        femaleDom.style.display = 'none';
+        mainChart.setOption(mainOption);
+    }, 5000);
+
+</script>
+
+</body>
+</html>
