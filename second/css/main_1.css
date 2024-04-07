@@ -1,0 +1,70 @@
+.logo_1 img{
+    position: absolute;
+    width: 130px;
+    height: auto;
+    top: 15px;
+    left: 20px;
+}
+#navbar {
+    display: flex;
+    width: auto;
+    height:30px ;
+    color: #fff;
+    padding-left:160px;
+    padding-top:10px;
+}
+
+#navbar ul {
+    width: auto;
+    height:30px ;
+     margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    display: inline-block;
+    margin-right: 30px;
+    flex-grow: 1;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#navbar li:last-child {
+    margin-right: 0;
+}
+
+#navbar li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-family:方正汉真广标简体; /* 修改字体 */
+    font-size: 30px; /* 修改字体大小 */
+    font-weight:bold;
+    text-shadow:2px 2px 3px black;
+}
+#menu_3{
+    text-decoration:underline;
+    font-size:32px;
+    color:aliceblue;
+    text-decoration-color:aqua;
+}
+ #navbar a:hover {
+   text-decoration:underline;
+   font-size:32px;
+   color:aliceblue;
+   text-decoration-color:aqua;
+}
+
+#navbar li:hover .hover-image {
+    width: 20px;
+    height: 20px;
+}
+
+.hover-image {
+    display: flex;
+    position: absolute;
+    top:3px;
+
+}
+
