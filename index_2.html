@@ -76,6 +76,45 @@
             position: absolute;
             top: 0.8vw;
         }
+        #menu_pro{
+            width:14.5vw;
+            height:100%;
+            background-color: rgb(240, 248, 255,0.5);
+            float:left;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            text-align: center;
+            padding: 0vw;
+            margin-top: 1vw;
+            margin-left:-0.3vw;
+            font-family: fangzheng, sans-serif; /* 修改字体 */
+            font-size: 2vw; /* 修改字体大小 */
+            line-height: 8vw;
+        }
+        #menu_pro a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        #menu_pro table{
+            
+        }
+        #menu_pro li {
+            display: inline-block;
+            margin:  0vw 0vw;
+            padding-left: 0vw;
+            border-bottom:0.2vw solid rgb(0, 0, 0);
+            
+        }
+        #menu_pro ul {
+            margin-left:-1vw;
+            padding-left: 0vw;
+        }
+        .menu_5{
+            font-size: 1.5vw;
+        }
+        #menu_pro tr:hover{
+            box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -106,6 +145,34 @@
                     <img class="hover-image" src="images/mark.png"  alt="Hover Image"/>
                 </li>
             </ul>
+        </div>
+        <div id="menu_pro">
+           <!--
+            <ul>
+                <li class="menu_1"><a href="#" alt="">黄斑部疾病</a></li>
+                <li class="menu_2"><a href="#">眼底血管炎</a></li>
+                <li class="menu_3"><a href="#">视神经疾病</a></li>
+                <li class="menu_4"><a href="#">眼底寄生虫病</a></li>
+                <li class="menu_5"><a href="#">视网膜脱离的眼底病</a></li>
+            </ul> 
+           --> 
+           <table >
+            <tr>
+                <td><a href="#">黄斑部疾病</a><br/></td>
+                </tr>
+            <tr>
+                <td><a href="#">眼底血管炎</a><br/></td>
+                </tr>
+             <tr>
+                <td><a href="#">视神经疾病</a><br/></td>
+                </tr>
+             <tr>
+                <td><a href="#">眼底寄生虫病</a><br/></td>
+                </tr>
+            <tr>
+                <td><a href="#">视网膜脱离</a><br/></td>
+                </tr>
+           </table>
         </div>
     </form>
 </body>
