@@ -113,7 +113,7 @@
         <ul>
             <li class="nav-item"><a href="#" onmouseover="hoverNavItem(0)" onmouseout="resetNavItem(0)">首页</a></li>
             <li class="separator">
-            <li class="nav-item"><a href="#" onmouseover="hoverNavItem(1)" onmouseout="resetNavItem(1)">数据</a></li>
+            <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/eg.html" onmouseover="hoverNavItem(1)" onmouseout="resetNavItem(1)">数据</a></li>
             <li class="separator"></li>
             <li class="nav-item">
             <a href="https://zzxxff1.github.io/workkk/index_2_1.html" onmouseover="hoverNavItem(2)" onmouseout="resetNavItem(2)">病例</a></li>
@@ -134,6 +134,10 @@
 </main>
 
 <script>
+    function resetNavItem(index) {
+        var hoverImage = document.getElementById('hover-image');
+        hoverImage.style.display = 'none';
+    }
     function hoverNavItem(index) {
         var navItems = document.getElementsByClassName('nav-item');
         var hoverImage = document.getElementById('hover-image');
@@ -144,10 +148,7 @@
         hoverImage.style.display = 'block';
     }
 
-    function resetNavItem(index) {
-        var hoverImage = document.getElementById('hover-image');
-        hoverImage.style.display = 'none';
-    }
+    
 </script>
 </body>
 </html>
