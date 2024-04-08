@@ -6,13 +6,12 @@
     <script src='https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js'></script>
 </head>
 <body>
-<div id='male' style="width: 400px;height:400px;background-color: white;float: left;"></div>
-<div id='female' style="width: 400px;height:400px;background-color: white;float: left;"></div>
+
 <div id='main' style="width: 800px;height:600px;background-color: white;clear:both;"></div>
 <script type="text/javascript">
     var chartDom = document.getElementById('main');
-			var myChart = echarts.init(chartDom);
-			var option;
+    var myChart = echarts.init(chartDom);
+    var option;
 
     var option = {
         xAxis: {
@@ -29,6 +28,7 @@
             splitLine: {show: false}, // 隐藏分隔线
         },
         grid: {
+            top: '20%', // 将图表向下移动10%
             backgroundColor: '#f5f5f5' // 设置网格区域的背景色
         },
         series: [
@@ -44,8 +44,8 @@
                 barWidth: 30, // 设置柱形图的宽度，单位为像素
                 itemStyle: {
                     borderRadius: [15, 15, 15, 15], // 设置柱形图的圆角
-                    color: '#61a0a8', // 设置柱形图的颜色
-                    borderColor: '#61a0a8', // 设置柱形图的边线颜色
+                    color: 'rgba(0, 102, 255, 0.7)', // 设置柱形图的颜色为蓝色，透明度为0.7
+                    borderColor: 'rgba(0, 102, 255, 0.7)', // 设置柱形图的边线颜色为蓝色，透明度为0.7
                     borderWidth: 2 // 设置柱形图的边线宽度
                 },
                 label: {

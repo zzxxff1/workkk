@@ -108,5 +108,64 @@
             </ul>
         </div>
     </form>
+    <div id='main' style="width: 800px;height:600px;clear:both;margin: auto;"></div>
+    <script type="text/javascript">
+    var chartDom = document.getElementById('main');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    var option = {
+        xAxis: {
+            type: 'category',
+            data: ['20-29岁', '30-39岁', '40-49岁', '50-59岁', '60岁及以上'],
+            axisLine: {show: false}, // 隐藏x轴线
+            axisTick: {show: false}, // 隐藏x轴刻度
+        },
+        yAxis: {
+            type: 'value',
+            axisLine: {show: false}, // 隐藏y轴线
+            axisTick: {show: false}, // 隐藏y轴刻度
+            axisLabel: {show: false}, // 隐藏y轴标签
+            splitLine: {show: false}, // 隐藏分隔线
+        },
+        grid: {
+            top: '20%', // 将图表向下移动20%
+            left: '0%',
+            backgroundColor: '#f5f5f5' // 设置网格区域的背景色
+        },
+        series: [
+            {
+                
+                data: [49.4, 61.2, 86.3, 95.3, 97.2],
+                type: 'bar',
+                
+                position: 'center',
+                showBackground: true,
+                backgroundStyle: {
+                    color: '#ffffff', // 背景图的颜色
+                    borderRadius: [15, 15, 15, 15] // 背景图的圆角
+                },
+                barWidth: 40, // 设置柱形图的宽度，单位为像素
+                itemStyle: {
+                    borderRadius: [15, 15, 15, 15], // 设置柱形图的圆角
+                    color: 'rgba(0, 106, 245, 0.7)', // 设置柱形图的颜色为蓝色，透明度为0.7
+                    borderColor: 'rgba(0, 102, 255, 0.7)', // 设置柱形图的边线颜色为蓝色，透明度为0.7
+                    borderWidth: 2 // 设置柱形图的边线宽度
+                },
+                label: {
+                    show: true,
+                    position: 'top', // 标签显示在顶部
+                    offset: [0, -10], // 标签偏移量
+                    formatter: '{c}%' // 标签格式
+                }
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+
+</script>
+
+</script>
 </body>
 </html>
