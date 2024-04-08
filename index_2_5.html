@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src='js/echarts.min.js'></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>病例-视神经疾病</title>
+    <style>        
+        body{ 
+            background-image: url('ly/images/background1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;   
+        }
+        
+        .logo {
+            position: absolute;
+            left: 2vw;
+        }
+        
+        #navbar .logo img {
+            width: 12vw; /* 修改图片宽度 */
+            height: auto; /* 根据宽度自动调整高度 */
+            padding-left: 1vw;
+            padding-top: 0px;
+        }
+        
+        #navbar {
+            color: #fff;
+            padding-left: 15vw;
+            padding-top: 2vw;
+        }
+        
+        #navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #navbar li {
+            display: inline-block;
+            margin-right: 2vw;
+        }
+        
+        #navbar li:last-child {
+            margin-right: 0;
+        }
+        
+        @font-face {
+            font-family: 'fangzheng';
+            src: url('ly/fangzheng.TTF') format('truetype');
+        }
+
+        #navbar li a {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 0.5vw 1vw;
+            font-family: fangzheng, sans-serif; /* 修改字体 */
+            font-size: 3vw; /* 修改字体大小 */
+        }
+        
+        #navbar a:hover {
+            text-decoration: underline;
+            font-size: 3.2vw;
+            color: #c7ebf6;
+            text-decoration-color: #95c4f7;
+            text-underline-offset: 0.23em;
+        }
+       
+        #navbar li:hover .hover-image {
+            display: block;
+            margin-left: 2vw;
+        }
+        
+        .hover-image {
+            display: none;
+            position: absolute;
+            top: 0.8vw;
+        }
+        #menu_pro{
+            width:12vw;
+            height:100%;
+            background-color: rgb(240, 248, 255,0.3);
+            float:left;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            text-align: center;
+            padding: 0vw;
+            margin-top: 1vw;
+            margin-left:-0.35vw;
+            font-family: fangzheng, sans-serif; /* 修改字体 */
+            font-size: 1.5vw; /* 修改字体大小 */
+            line-height: 8vw;
+        }
+        #menu_pro a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        #menu_pro table{
+            width: 12vw;
+            padding: 0;
+            margin: 0;
+        }
+        #menu_pro tr:hover{
+            width: max-content;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+        #menu_01{
+            display: inline;
+            width: 100%;
+            height: auto;
+        }
+        .ima_01{
+            width: 17vw;
+            height: auto;
+            margin-top: 3vw;
+            margin-left: 2vw;
+        }
+        .ima_02{
+            width: 17vw;
+            height: auto;
+            margin-top: 2vw;
+            margin-left: 2vw;
+        }
+        .title01, .title02{
+            width: 17vw;
+            height: auto;
+            margin-left: 2vw;
+            text-align: center;
+        }
+        .text{
+            padding-left: 35vw;
+            margin-top: -38vw;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="navbar">
+            <div class="logo">
+                <img src="images/EYEOCT.png" alt="Logo"/> 
+            </div>
+            <ul>
+                <li>
+                    <a href="https://zzxxff1.github.io/workkk/02/first.html">首页</a>
+                    <img class="hover-image" src="images/mark.png"  alt="Hover Image" />
+                </li>
+                <li>
+                    <a href="#">数据</a>
+                    <img class="hover-image" src="images/mark.png"  alt="Hover Image"/>
+                </li>
+                <li>
+                    <a href="#">病例</a>
+                    <img class="hover-image" src="images/mark.png"  alt="Hover Image"/>
+                </li>
+                <li>
+                    <a href="#">示例</a>
+                    <img class="hover-image" src="images/mark.png"  alt="Hover Image"/>
+                </li>
+                <li>
+                    <a href="#">科普</a>
+                    <img class="hover-image" src="images/mark.png"  alt="Hover Image"/>
+                </li>
+            </ul>
+        </div>
+        <div id="menu_pro">
+           <!--
+            <ul>
+                <li class="menu_1"><a href="#" alt="">黄斑部疾病</a></li>
+                <li class="menu_2"><a href="#">眼底血管炎</a></li>
+                <li class="menu_3"><a href="#">视神经疾病</a></li>
+                <li class="menu_4"><a href="#">眼底寄生虫病</a></li>
+                <li class="menu_5"><a href="#">视网膜脱离的眼底病</a></li>
+            </ul> 
+           --> 
+           <table class="table">
+            <tr>
+                <td><u> <a href="https://zzxxff1.github.io/workkk/index_2_1.html"> <font color="rgb(250,255,0)">黄斑部疾病</font></a></u><br/></td>
+                </tr>
+            <tr>
+                <td><a href="https://zzxxff1.github.io/workkk/index_2_2.html">眼底血管炎</a><br/></td>
+                </tr>
+             <tr>
+                <td><a href="#">视神经疾病</a><br/></td>
+                </tr>
+             <tr>
+                <td><a href="#">眼底寄生虫病</a><br/></td>
+                </tr>
+            <tr>
+                <td><a href="#">视网膜脱离</a><br/></td>
+                </tr>
+           </table>
+        </div>
+        <div id="menu_01">
+            <image class="ima_02" src='images/1.jpeg'/><br/>
+            <font class="title01">正常眼底</font><br/><br/>
+            <image class="ima_01" src='images/menu_03.jpeg'/><br/>
+            <font class="title02">糖网性视神经病变</font>
+            <div class="text">
+            <p class="text_01">病因：黄斑区出现病变，可能与巩膜色素沉积、睑裂斑、翼状胬肉等有关。<br/></p>
+            <p class="text_02">症状：视力下降、看东西有黑影或变形等症状。</p>
+            <p class="text_03">治疗方法：
+                <ul>
+                    <li>药物治疗：遵医嘱进行药物治疗。</li>
+                    <li>激光治疗：激光治疗可以用于治疗黄斑部的血管病变，如黄斑部新生血管。激光可用于焊合或破坏异常的血管，以防止渗漏和进一步损伤。</li>
+                    <li>手术治疗：在一些情况下，手术可能是必要的，特别是对于黄斑脱离等情况。黄斑脱离时，手术可以尝试将黄斑重新定位到正常位置，以尽可能恢复视力。</li>
+                    <li>营养补充：对于一些黄斑变性患者，补充特定的抗氧化物质、维生素和矿物质可能有助于减缓病情进展。</li>
+                    <li>请及时去正规医院就诊。</li>
+                </ul>
+            </p>
+            <p class="text_04">预防：
+                <ul>
+                    <li>定期进行眼科检查；</li>
+                    <li>积极治疗眼部疾病；</li>
+                    <li>改掉不良生活习惯；</li>
+                    <li>戒烟戒酒，不熬夜；</li>
+                    <li>坚持日常锻炼，多吃蔬菜水果等。</li>
+                </ul>
+            </p>
+            </div>
+        </div>
+    
+    </form>
+</body>
+</html>
