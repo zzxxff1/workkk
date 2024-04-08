@@ -77,9 +77,9 @@
        
         display: block;
            margin-left: 1.5vw; 
-        margin-top:-5.5vw;  
-        width: 1vw; /* 自定义悬停图片的宽度 */
-        height: 1vw; /* 自定义悬停图片的高度 */
+        margin-top:-4.5vw;  
+        width: 0.5vw; /* 自定义悬停图片的宽度 */
+        height: 0.5vw; /* 自定义悬停图片的高度 */
        
     }
         #menu_pro{
@@ -142,27 +142,30 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <header>
-    
-            <img src="images/EYEOCT.png" alt="Logo" id="logo">
-            <div id="navbar">
-            <nav>
-                <ul>
-                    <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/02/first01.html" onmouseover="hoverNavItem(0)" onmouseout="resetNavItem(0)">首页</a></li>
-                    <li class="separator">
-                    <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/eg.html" onmouseover="hoverNavItem(1)" onmouseout="resetNavItem(1)">数据</a></li>
-                    <li class="separator"></li>
-                    <li class="nav-item">
-                    <a href="https://zzxxff1.github.io/workkk/index_2_1.html" onmouseover="hoverNavItem(2)" onmouseout="resetNavItem(2)">病例</a></li>
-                    <li class="separator"></li>
-                    <li class="nav-item"><a href="#" onmouseover="hoverNavItem(3)" onmouseout="resetNavItem(3)">示例</a></li>
-                    <li class="separator"></li>
-                    <li class="nav-item"><a href="#" onmouseover="hoverNavItem(4)" onmouseout="resetNavItem(4)">科普</a></li>
-                </ul>
-            </nav>
-        </div>
-        </header>
+    <header>
+            
+        <img src="images/EYEOCT.png" alt="Logo" id="logo">
+        <div id="navbar">
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/02/first01.html" onmouseover="hoverNavItem(0)" onmouseout="resetNavItem(0)">首页</a></li>
+                <li class="separator">
+                <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/eg.html" onmouseover="hoverNavItem(1)" onmouseout="resetNavItem(1)">数据</a></li>
+                <li class="separator"></li>
+                <li class="nav-item">
+                <a href="https://zzxxff1.github.io/workkk/index_2_1.html" onmouseover="hoverNavItem(2)" onmouseout="resetNavItem(2)">病例</a></li>
+                <li class="separator"></li>
+                <li class="nav-item"><a href="#" onmouseover="hoverNavItem(3)" onmouseout="resetNavItem(3)">示例</a></li>
+                <li class="separator"></li>
+                <li class="nav-item"><a href="#" onmouseover="hoverNavItem(4)" onmouseout="resetNavItem(4)">科普</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+        
+            <div id="hover-image"> <img src="images/mark.png"></div>
+        </main>
         <div id="menu_pro">
            
            <table class="table">
@@ -213,7 +216,20 @@
             </p>
             </div>
         </div>
-    
-    </form>
+        <script>
+            function resetNavItem(index) {
+                var hoverImage = document.getElementById('hover-image');
+                hoverImage.style.display = 'none';
+            }
+            function hoverNavItem(index) {
+                var navItems = document.getElementsByClassName('nav-item');
+                var hoverImage = document.getElementById('hover-image');
+                var targetNavItem = navItems[index].getElementsByTagName('a')[0];
+                var targetPosition = targetNavItem.getBoundingClientRect();
+                hoverImage.style.top = (targetPosition.top - 120) + 'px'; // 自定义悬停图片的位置
+                hoverImage.style.left = (targetPosition.left + (targetPosition.width / 2) - 50) + 'px'; // 自定义悬停图片的位置
+                hoverImage.style.display = 'block';
+            }
+        </script>
 </body>
 </html>
