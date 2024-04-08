@@ -3,7 +3,7 @@
 <head runat="server">
     <script src='js/echarts.min.js'></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>首页</title>
+    <title>病例</title>
     <style>        
         body{ 
             background-image: url('ly/images/background1.jpg');
@@ -77,16 +77,16 @@
             top: 0.8vw;
         }
         #menu_pro{
-            width:14.5vw;
+            width:14vw;
             height:100%;
-            background-color: rgb(240, 248, 255,0.5);
+            background-color: rgb(240, 248, 255,0.3);
             float:left;
             color: rgb(0, 0, 0);
             text-decoration: none;
             text-align: center;
             padding: 0vw;
             margin-top: 1vw;
-            margin-left:-0.3vw;
+            margin-left:-0.35vw;
             font-family: fangzheng, sans-serif; /* 修改字体 */
             font-size: 2vw; /* 修改字体大小 */
             line-height: 8vw;
@@ -96,24 +96,16 @@
             text-decoration: none;
         }
         #menu_pro table{
-            
-        }
-        #menu_pro li {
-            display: inline-block;
-            margin:  0vw 0vw;
-            padding-left: 0vw;
-            border-bottom:0.2vw solid rgb(0, 0, 0);
-            
-        }
-        #menu_pro ul {
-            margin-left:-1vw;
-            padding-left: 0vw;
+            width: 14vw;
+            padding: 0;
+            margin: 0;
         }
         .menu_5{
             font-size: 1.5vw;
         }
         #menu_pro tr:hover{
-            box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+            width: max-content;
+            box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
         }
     </style>
 </head>
@@ -125,7 +117,7 @@
             </div>
             <ul>
                 <li>
-                    <a href="http://baidu.com">首页</a>
+                    <a href="https://zzxxff1.github.io/workkk/02/first.html">首页</a>
                     <img class="hover-image" src="images/mark.png"  alt="Hover Image" />
                 </li>
                 <li>
@@ -156,7 +148,7 @@
                 <li class="menu_5"><a href="#">视网膜脱离的眼底病</a></li>
             </ul> 
            --> 
-           <table >
+           <table class="table">
             <tr>
                 <td><a href="#">黄斑部疾病</a><br/></td>
                 </tr>
@@ -174,6 +166,7 @@
                 </tr>
            </table>
         </div>
+        
     </form>
 </body>
 </html>
