@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>上传图片示例</title>
+<style>
+    /* 这里可以添加一些样式 */
+</style>
+</head>
+<body>
+    <input type="file" id="imageInput" accept="image/*">
+    <button onclick="uploadImage()">上传图片</button>
+    <div id="imagePreview"></div>
+
+    <script>
+        function uploadImage() {
+            const imageInput = document.getElementById('imageInput');
+            const imagePreview = document.getElementById('imagePreview');
+            const file = imageInput.files[0];
+            
+            if (file) {
+                // 预览图片
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = e.target.result;
+                    imgElement.style.maxWidth = '100%';
+                    imgElement.style.height = 'auto';
+                    imagePreview.innerHTML = '';
+                    imagePreview.appendChild(imgElement);
+                }
+                reader.readAsDataURL(file);
+                
+                // 上传图片到服务器的逻辑可以在这里添加
+                // 这里只是一个简单的示例
+            } else {
+                alert('请选择图片');
+            }
+        }
+    </script>
+</body>
+</html>
