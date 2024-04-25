@@ -12,22 +12,36 @@
         margin: 0;
         font-family: Arial, sans-serif;
         background-repeat: no-repeat;
-             background-attachment: fixed;
-                background-size: 100% 100%;
+        background-attachment: fixed;
+        background-size: 100% 100%;
     }
 
     header {
         display: flex;
-        
-      
         align-items: center; /* 垂直居中导航项 */
     }
 
+/* 定义缩放和透明度动画的关键帧 */
+@keyframes scaleAndFade {
+    0% {
+        transform: scale(0);
+        opacity: 0; /* 初始时完全透明 */
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5; /* 中间时透明度为0.5 */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1; /* 最终完全不透明 */
+    }
+}
     #logo {
         width: 20vw; /* 自定义logo图片的宽度 */
         height: auto;
         margin-right: 1vw;
         margin-top: 2vw;
+        animation: scaleAndFade 2s linear forwards;
     }
 
     nav ul {
@@ -78,36 +92,51 @@
 
     #hover-image {
         position: absolute;
-       
         display: block;
-           margin-left: 1.5vw; 
+        margin-left: 1.5vw; 
         margin-top:-5.5vw;  
         width: 1vw; /* 自定义悬停图片的宽度 */
         height: 1vw; /* 自定义悬停图片的高度 */
        
     }
-
     #image1 {
         display: flex;
         margin-top: 1vw;
         width:50vw ; /* 自定义底部图片的宽度 */
         height: auto;
         margin-left: 3vw;
+        
     }
+
+
+
+
+    /* 定义旋转和缩放动画的关键帧 */
+@keyframes rotateAndScale {
+    0% {
+        transform: scale(0) rotate(0deg); /* 初始时完全缩小并且不旋转 */
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg); /* 中间时放大并旋转180度 */
+    }
+    100% {
+        transform: scale(1) rotate(360deg); /* 最终尺寸为原始尺寸并旋转360度（一圈）*/
+    }
+}
     #image2 {
         display: flex;
         margin-top: 5vw;
         width:20vw ; /* 自定义底部图片的宽度 */
         height: auto;
         margin-left: 4vw;
+        animation: rotateAndScale 1.5s linear forwards; /*动画相关设置*/
     }
+   
 </style>
 </head>
 <body>
-   
 <header>
-    
-    <img src="images/EYEOCT.png" alt="Logo" id="logo">
+    <img src="images/EYEOCT.png" alt="Logo" id="logo">  
     <div id="navbar">
     <nav>
         <ul>
