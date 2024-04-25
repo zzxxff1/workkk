@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src='js/echarts.min.js'></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>病例-黄斑部疾病</title>
+    <style>        
+        body{ 
+            background-image: url('ly/images/background1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;   
+        }
+        
+    header {
+        display: flex;
+        
+      
+        align-items: center; /* 垂直居中导航项 */
+    }
+
+    #logo {
+        width: 20vw; /* 自定义logo图片的宽度 */
+        height: auto;
+        margin-right: 1vw;
+        margin-top: 2vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 2vw;
+        display: flex;
+        
+    }
+
+    .nav-item {
+        display: inline-block;
+        margin-right: 5vw;
+    }
+
+     .separator {
+       flex:1;
+        border-right: 0.2vw solid #6e92d9;
+       margin:0 1vw; 
+     }
+    
+     @font-face {
+            font-family: 'fangzheng';
+            src: url('ly/fangzheng.TTF') format('truetype');
+        }
+    .nav-item a {
+        display: block;    
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 3vw;
+        transition: all 0.3s ease;
+        font-family: fangzheng, sans-serif; /* 修改字体 */
+        text-shadow:5px 4px 3px rgb(15, 6, 50);
+    }
+
+    .nav-item a:hover {
+        text-decoration:underline;
+        font-size:3.2vw;
+        color:#c7ebf6;
+        text-decoration-color:#95c4f7;
+        text-underline-offset: 0.23em;
+    }
+
+    main {
+        position: relative;
+        display: flex;
+    }
+
+    #hover-image {
+        position: absolute;
+       
+        display: block;
+           margin-left: 1.5vw; 
+        margin-top:-5.5vw;  
+        width: 1vw; /* 自定义悬停图片的宽度 */
+        height: 1vw; /* 自定义悬停图片的高度 */
+       
+    }
+    #menu_pro{
+        width:12vw;
+        height:100%;
+        background-color: rgb(240, 248, 255,0.3);
+        float:left;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        text-align: center;
+        padding: 0vw;
+        margin-top: 0vw;
+        margin-left:-0.35vw;
+        font-family: fangzheng, sans-serif; /* 修改字体 */
+        font-size: 1.5vw; /* 修改字体大小 */
+        line-height: 8vw;
+    }
+        #menu_pro a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        #menu_pro table{
+            width: 12vw;
+            padding: 0;
+            margin: 0;
+        }
+        #menu_pro tr:hover{
+            width: max-content;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+        #menu_01{
+            display: inline;
+            width: 100%;
+            height: auto;
+        }
+        .ima_01{
+            width: 17vw;
+            height: auto;
+            margin-top: 3.1vw;
+            margin-left: 2vw;
+        }
+        .ima_02{
+            width: 17vw;
+            height: auto;
+            margin-top: 1.2vw;
+            margin-left: 2vw;
+        }
+        .title01, .title02{
+            width: 17vw;
+            height: auto;
+            font-size: 1.5vw;
+            margin-left: 2vw;
+            text-align: center;
+        }
+        .text{
+            width: 60vw;
+            font-size: 1.5vw;
+            padding-left: 35vw;
+            margin-top: -39vw;
+
+        }
+        .text001{
+            font-size: 1.2vw;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <header>
+            
+            <img src="images/EYEOCT.png" alt="Logo" id="logo">
+            <div id="navbar">
+            <nav>
+                <ul>
+                    <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/02/first01.html" onmouseover="hoverNavItem(0)" onmouseout="resetNavItem(0)">首页</a></li>
+                    <li class="separator">
+                    <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/eg.html" onmouseover="hoverNavItem(1)" onmouseout="resetNavItem(1)">数据</a></li>
+                    <li class="separator"></li>
+                    <li class="nav-item">
+                    <a href="https://zzxxff1.github.io/workkk/index_2_1.html" onmouseover="hoverNavItem(2)" onmouseout="resetNavItem(2)">病例</a></li>
+                    <li class="separator"></li>
+                    <li class="nav-item"><a href="#" onmouseover="hoverNavItem(3)" onmouseout="resetNavItem(3)">示例</a></li>
+                    <li class="separator"></li>
+                    <li class="nav-item"><a href="#" onmouseover="hoverNavItem(4)" onmouseout="resetNavItem(4)">科普</a></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+        <main>
+            
+                <div id="hover-image"> <img src="images/mark.png"></div>
+            </main>
+       
+        
+    
+    
+    
+    <script>
+        function resetNavItem(index) {
+            var hoverImage = document.getElementById('hover-image');
+            hoverImage.style.display = 'none';
+        }
+        function hoverNavItem(index) {
+            var navItems = document.getElementsByClassName('nav-item');
+            var hoverImage = document.getElementById('hover-image');
+            var targetNavItem = navItems[index].getElementsByTagName('a')[0];
+            var targetPosition = targetNavItem.getBoundingClientRect();
+            hoverImage.style.top = (targetPosition.top - 120) + 'px'; // 自定义悬停图片的位置
+            hoverImage.style.left = (targetPosition.left + (targetPosition.width / 2) - 50) + 'px'; // 自定义悬停图片的位置
+            hoverImage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
