@@ -37,10 +37,11 @@
     }
 }
     #logo {
-        width: 20vw; /* 自定义logo图片的宽度 */
+        width:15vw; /* 自定义logo图片的宽度 */
         height: auto;
         margin-right: 1vw;
-        margin-top: 2vw;
+        margin-top: 0.5vw;
+        margin-bottom: 5vw;
         animation: scaleAndFade 2s linear forwards;
     }
 
@@ -48,19 +49,22 @@
         list-style-type: none;
         padding: 0;
         margin-top: 2vw;
+        margin-bottom: 7vw;
+        margin-left: 1vw;
         display: flex;
         
     }
 
     .nav-item {
         display: inline-block;
-        margin-right: 5vw;
+        margin-right: 3vw;
     }
 
-     .separator {
+    .separator {
        flex:1;
         border-right: 0.2vw solid #6e92d9;
-       margin:0 1vw; 
+       margin-bottom: 1vw;
+       margin-right: 2vw; 
      }
     
      @font-face {
@@ -71,7 +75,7 @@
         display: block;    
         color: aliceblue;
         text-decoration: none;
-        font-size: 3vw;
+        font-size: 2vw;
         transition: all 0.3s ease;
         font-family: fangzheng, sans-serif; /* 修改字体 */
         text-shadow:5px 4px 3px rgb(15, 6, 50);
@@ -79,25 +83,15 @@
 
     .nav-item a:hover {
         text-decoration:underline;
-        font-size:3.2vw;
+        font-size:2.2vw;
         color:#c7ebf6;
         text-decoration-color:#95c4f7;
         text-underline-offset: 0.23em;
     }
 
     main {
-        position: relative;
-        display: flex;
-    }
-
-    #hover-image {
         position: absolute;
-        display: none;
-        margin-left: 1.5vw; 
-        margin-top:-5.5vw;  
-        width: 1vw; /* 自定义悬停图片的宽度 */
-        height: 1vw; /* 自定义悬停图片的高度 */
-       
+        display: flex;
     }
     #image1 {
         display: flex;
@@ -105,7 +99,6 @@
         width:50vw ; /* 自定义底部图片的宽度 */
         height: auto;
         margin-left: 3vw;
-        
     }
 
 
@@ -140,42 +133,26 @@
     <div id="navbar">
     <nav>
         <ul>
-            <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/02/first01.html" onmouseover="hoverNavItem(0)" onmouseout="resetNavItem(0)">首页</a></li>
+            <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/02/first01.html">首页</a></li>
             <li class="separator">
-            <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/eg.html" onmouseover="hoverNavItem(1)" onmouseout="resetNavItem(1)">数据</a></li>
+            <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/eg.html" >数据</a></li>
             <li class="separator"></li>
             <li class="nav-item">
-            <a href="https://zzxxff1.github.io/workkk/index_2_1.html" onmouseover="hoverNavItem(2)" onmouseout="resetNavItem(2)">病例</a></li>
+            <a href="https://zzxxff1.github.io/workkk/index_2_1.html" >病例</a></li>
             <li class="separator"></li>
-            <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/index_3_1.html" onmouseover="hoverNavItem(3)" onmouseout="resetNavItem(3)">示例</a></li>
+            <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/index_3_1.html" >示例</a></li>
             <li class="separator"></li>
-            <li class="nav-item"><a href="" onmouseover="hoverNavItem(4)" onmouseout="resetNavItem(4)">科普</a></li>
+            <li class="nav-item"><a href="">科普</a></li>
         </ul>
     </nav>
 </div>
 </header>
 
 <main>
-    
-    <div id="hover-image"> <img src="images/mark.png"></div>
     <img src="images/title.png" alt="Image 1" id="image1">
     <img src="images/logo.png" alt="Image 2" id="image2">
 </main>
 
-<script>
-    function resetNavItem(index) {
-        var hoverImage = document.getElementById('hover-image');
-        hoverImage.style.display = 'none';
-    }
-    function hoverNavItem(index) {
-        var navItems = document.getElementsByClassName('nav-item');
-        var hoverImage = document.getElementById('hover-image');
-        var targetNavItem = navItems[index].getElementsByTagName('a')[0];
-        var targetPosition = targetNavItem.getBoundingClientRect();
-        hoverImage.style.top = (targetPosition.top - 120) + 'px'; // 自定义悬停图片的位置
-        hoverImage.style.left = (targetPosition.left + (targetPosition.width / 2) - 50) + 'px'; // 自定义悬停图片的位置
-        hoverImage.style.display = 'block';
-    }
 
     
 </script>
