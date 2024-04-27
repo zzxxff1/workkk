@@ -67,8 +67,10 @@
         text-underline-offset: 0.23em;
     }
     #menu_pro{
-        width:12vw;
+        width:12.5vw;
+        border-radius: 2vw;
         height:100%;
+        /*background-image: url('ly/images/background2.jpg');*/
         background-color: rgb(240, 248, 255,0.5);
         float:left;
         color: rgb(0, 0, 0);
@@ -82,18 +84,31 @@
         font-size: 1.6vw; /* 修改字体大小 */
         line-height: 8vw;
     }
+
         #menu_pro a {
             color: rgb(0, 0, 0);
             text-decoration: none;
         }
         #menu_pro table{
             width: 12vw;
+            border-radius: 2vw;
+            padding-left: 0.5vw;
+            padding-top: 0.5vw;
+            margin: 0;
+            text-underline-offset: 0.23em;
+        }
+        #menu_pro td{
+            border: 0.2vw solid #000;
+            border-radius: 2vw;
             padding: 0;
             margin: 0;
         }
         #menu_pro tr:hover{
             width: max-content;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            border-radius: 2vw;
+            font-size: 1.8vw;
+            transition: all 0.2s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
         }
         #menu_01{
             display: inline;
