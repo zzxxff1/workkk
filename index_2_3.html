@@ -12,60 +12,61 @@
             background-size: 100% 100%;   
         }
         
-        header {
+    header {
+        display: flex;      
+        align-items: center; /* 垂直居中导航项 */
+    }
+
+    #logo {
+        width: 15vw; /* 自定义logo图片的宽度 */
+        height: auto;
+        margin-right: 1vw;
+        margin-top: 0.5vw;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 2vw;
+        margin-left: 1vw;
         display: flex;
         
-      
-            align-items: center; /* 垂直居中导航项 */
-        }
+    }
 
-        #logo {
-            width: 20vw; /* 自定义logo图片的宽度 */
-            height: auto;
-            margin-right: 1vw;
-            margin-top: 2vw;
-        }
+    .nav-item {
+        display: inline-block;
+        margin-right:3vw;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 2vw;
-            display: flex;
-            
+     .separator {
+       flex:1;
+        border-right: 0.2vw solid #6e92d9;
+       margin-bottom: 1vw;
+       margin-right: 2vw; 
+     }
+    
+     @font-face {
+            font-family: 'fangzheng';
+            src: url('ly/fangzheng.TTF') format('truetype');
         }
+    .nav-item a {
+        display: block;    
+        color: aliceblue;
+        text-decoration: none;
+        margin-bottom: 1vw;
+        font-size: 2vw;
+        font-family: fangzheng, sans-serif; /* 修改字体 */
+        text-shadow:5px 4px 3px rgb(15, 6, 50);
+    }
 
-        .nav-item {
-            display: inline-block;
-            margin-right: 5vw;
-        }
-
-        .separator {
-        flex:1;
-            border-right: 0.2vw solid #6e92d9;
-        margin:0 1vw; 
-        }
-        
-        @font-face {
-                font-family: 'fangzheng';
-                src: url('ly/fangzheng.TTF') format('truetype');
-            }
-        .nav-item a {
-            display: block;    
-            color: aliceblue;
-            text-decoration: none;
-            font-size: 3vw;
-            transition: all 0.3s ease;
-            font-family: fangzheng, sans-serif; /* 修改字体 */
-            text-shadow:5px 4px 3px rgb(15, 6, 50);
-        }
-
-        .nav-item a:hover {
-            text-decoration:underline;
-            font-size:3.2vw;
-            color:#c7ebf6;
-            text-decoration-color:#95c4f7;
-            text-underline-offset: 0.23em;
-        }
+    .nav-item a:hover {
+        text-decoration:underline;
+        font-size:2.2vw;
+        color:#c7ebf6;
+        transition: all 0.2s ease;
+        text-decoration-color:#95c4f7;
+        text-underline-offset: 0.23em;
+    }
         #menu_pro{
             width:11.5vw;
             border-radius: 2vw;
