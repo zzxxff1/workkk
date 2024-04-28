@@ -63,11 +63,17 @@
         transition: all 0.2s ease;
         text-decoration-color:#95c4f7;
     }
+    main{
+        display: inline;
+    }
         .v1{
             display: flex;
             width: 40vw;
             margin-top: 1vw;
             margin-left: 2vw;
+        }
+        .tips ul{
+            list-style-type: none;
         }
     </style>
 </head>
@@ -95,11 +101,27 @@
         </div>
     </header>
     <main>
-        <video class="v1" controls poster="images/video-poster.png">
+        <div><video class="v1" controls poster="images/video-poster.png">
             <source src="images/video.mp4" type="video/mp4">
             <!-- 如果需要支持其他格式，可以添加其他<source>标签 -->
-        </video>
+        </video></div>
+        <div class="tips">
+            <ul>
+                tips:
+                <li>1. 定时休息： 长时间注视电脑、手机或其他屏幕可能导致眼睛疲劳和干涩。
+                    每隔一段时间，比如每小时休息5-10分钟，让眼睛得到放松。</li>
+                <li>2. 20-20-20法则： 每20分钟，注视远处至少20秒钟，这可以帮助减轻眼睛的紧张和疲劳。</li>
+                <li>3. 调整屏幕亮度和对比度： 适当调整屏幕的亮度和对比度，使其不至于对眼睛造成过大的刺激。</li>
+            </ul>
+        </div>
         </main>
-        
+        <div>
+            <img src="images/kepu1.1.png" />
+            眼部穴位科普images/kepu1.1.png
+            <img src="images/kepu1.2.png" />
+            <img src="images/xuewei1.jpg" />
+            <img src="images/xuewei2.jpg" />
+            <img src="images/xuewei3.jpg" />
+        </div>            
 </body>
 </html>
