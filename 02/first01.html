@@ -37,11 +37,10 @@
     }
 }
     #logo {
-        width:15vw; /* 自定义logo图片的宽度 */
+        width: 15vw; /* 自定义logo图片的宽度 */
         height: auto;
         margin-right: 1vw;
-        margin-top: 0.5vw;
-        margin-bottom: 5vw;
+        margin-top: 0vw;
         animation: scaleAndFade 2s linear forwards;
     }
 
@@ -49,7 +48,6 @@
         list-style-type: none;
         padding: 0;
         margin-top: 2vw;
-        margin-bottom: 7vw;
         margin-left: 1vw;
         display: flex;
         
@@ -71,12 +69,13 @@
             font-family: 'fangzheng';
             src: url('images/fangzheng.TTF') format('truetype');
         }
-    .nav-item a {
+        .nav-item a {
         display: block;    
         color: aliceblue;
         text-decoration: none;
+        margin-top: 0.5vw;
+        margin-bottom: 1vw;
         font-size: 2vw;
-        transition: all 0.3s ease;
         font-family: fangzheng, sans-serif; /* 修改字体 */
         text-shadow:5px 4px 3px rgb(15, 6, 50);
     }
@@ -85,6 +84,7 @@
         text-decoration:underline;
         font-size:2.2vw;
         color:#c7ebf6;
+        transition: all 0.2s ease;
         text-decoration-color:#95c4f7;
         text-underline-offset: 0.23em;
     }
@@ -92,6 +92,7 @@
     main {
         position: absolute;
         display: flex;
+        margin-top: 6.5vw;
     }
     #image1 {
         display: flex;
@@ -131,7 +132,24 @@
 <header>
     <img src="images/EYEOCT.png" alt="Logo" id="logo">  
     <div id="navbar">
-    <nav>
+        <table style="width: 60vw;">
+            <td class="nav-item" style="width: 5vw;">
+                <a href="https://zzxxff1.github.io/workkk/02/first01.html" >首页</a>
+            </td>
+            <td class="nav-item" style="width: 5vw;">
+                
+                <a href="https://zzxxff1.github.io/workkk/eg.html">数据</a>
+            </td>
+            <td class="nav-item" style="width: 5vw;">
+                <a href="https://zzxxff1.github.io/workkk/index_2_1.html">病例</a>
+            </td>
+            <td class="nav-item" style="width: 5vw;"><a href="https://zzxxff1.github.io/workkk/index_3_1.html" >示例</a>
+            </td>
+            <td class="nav-item" style="width: 5vw;">
+                <a href="#" >科普</a>
+            </td>
+        </table>
+    <!-- <nav>
         <ul>
             <li class="nav-item"><a href="https://zzxxff1.github.io/workkk/02/first01.html">首页</a></li>
             <li class="separator">
@@ -144,7 +162,7 @@
             <li class="separator"></li>
             <li class="nav-item"><a href="">科普</a></li>
         </ul>
-    </nav>
+    </nav> -->
 </div>
 </header>
 
