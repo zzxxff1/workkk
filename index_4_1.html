@@ -5,18 +5,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>病例-眼底血管炎</title>
     <style>        
-            body{ 
-            background-image: url('ly/images/background1.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;   
-        }
-        
+    body{ 
+        background-image: url('ly/images/background1.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;   
+    }
     header {
         display: flex;      
         align-items: center; /* 垂直居中导航项 */
     }
-
     #logo {
         width: 15vw; /* 自定义logo图片的宽度 */
         height: auto;
@@ -66,12 +64,16 @@
         transition: all 0.2s ease;
         text-decoration-color:#95c4f7;
     }
-        
+        .v1{
+            display: flex;
+            width: 40vw;
+            margin-top: 1vw;
+            margin-left: 2vw;
+        }
     </style>
 </head>
 <body>
     <header>
-            
         <img src="images/EYEOCT.png" alt="Logo" id="logo">
         <div id="navbar">
             <table style="width: 60vw;">
@@ -92,13 +94,12 @@
                 </td>
             </table>
         </div>
-        <div>
-            <video src="images/video.mp4">
-
-            </video>
-        </div>
     </header>
     <main>
+        <video class="v1" controls poster="images/video-poster.png">
+            <source src="images/video.mp4" type="video/mp4">
+            <!-- 如果需要支持其他格式，可以添加其他<source>标签 -->
+        </video>
         </main>
         
 </body>
