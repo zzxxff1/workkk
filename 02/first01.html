@@ -20,28 +20,22 @@
         display: flex;
         align-items: center; /* 垂直居中导航项 */
     }
-
-/* 定义缩放和透明度动画的关键帧 */
-@keyframes scaleAndFade {
-    0% {
-        transform: scale(0);
-        opacity: 0; /* 初始时完全透明 */
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.5; /* 中间时透明度为0.5 */
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1; /* 最终完全不透明 */
-    }
-}
+    @keyframes fadeIn {
+        from {
+            opacity: 0; /* 开始时完全透明 */
+            transform: translateX(-50%); /* 起始位置在左侧外部 */
+        }
+        to {
+            opacity: 1; /* 渐显完成后完全不透明 */
+            transform: translateX(0); /* 最终位置在左侧外部 */
+        }
+    }    
     #logo {
         width: 15vw; /* 自定义logo图片的宽度 */
         height: auto;
         margin-right: 1vw;
         margin-top: 0vw;
-        animation: scaleAndFade 2s linear forwards;
+        animation: fadeIn 2s ease; /* 定义动画，2秒钟渐显 */
     }
 
     nav ul {
@@ -58,13 +52,6 @@
         margin-right: 3vw;
     }
 
-    .separator {
-       flex:1;
-        border-right: 0.2vw solid #6e92d9;
-       margin-bottom: 1vw;
-       margin-right: 2vw; 
-     }
-    
      @font-face {
             font-family: 'fangzheng';
             src: url('images/fangzheng.TTF') format('truetype');
@@ -73,7 +60,7 @@
         display: block;    
         color: aliceblue;
         text-decoration: none;
-        margin-top: 0.5vw;
+        margin-top: 0.2vw;
         margin-bottom: 1vw;
         font-size: 2vw;
         font-family: fangzheng, sans-serif; /* 修改字体 */
@@ -94,16 +81,12 @@
     }
     #image1 {
         display: flex;
-        margin-top: 1vw;
+        margin-top: -2.5vw;
         width:50vw ; /* 自定义底部图片的宽度 */
         height: auto;
         margin-left: 3vw;
     }
-
-
-
-
-    /* 定义旋转和缩放动画的关键帧 */
+/* 定义旋转和缩放动画的关键帧 */
 @keyframes rotateAndScale {
     0% {
         transform: scale(0) rotate(0deg); /* 初始时完全缩小并且不旋转 */
@@ -117,7 +100,7 @@
 }
     #image2 {
         display: flex;
-        margin-top: 5vw;
+        margin-top: 3vw;
         width:20vw ; /* 自定义底部图片的宽度 */
         height: auto;
         margin-left: 4vw;
@@ -144,6 +127,7 @@
             <td class="nav-item" style="width: 5vw;"><a href="https://zzxxff1.github.io/workkk/index_3_1.html" >示例</a>
             </td>
             <td class="nav-item" style="width: 5vw;">
+                
                 <a href="https://zzxxff1.github.io/workkk/index_4_1.html" >科普</a>
             </td>
         </table>
