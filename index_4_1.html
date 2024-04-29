@@ -66,15 +66,64 @@
     main{
         display: inline;
     }
+        .video01{
+            width: 45vw;
+            margin-right: 0vw;
+        }
         .v1{
             display: flex;
-            width: 40vw;
+            width: 42vw;
             margin-top: 1vw;
-            margin-left: 2vw;
+            margin-left: 1vw;
+        }
+        .tips{
+            font-family: fangzheng, sans-serif;
+            font-size: 1.3vw
+        }
+        .tips_title{
+            font-size: 2vw;
+            line-height: 4vw;
+        }
+        .tips_content{
+            padding-left: 2vw;
         }
         .tips ul{
+            width: 50vw;
             list-style-type: none;
+            margin-left: 42vw;
+            margin-top: -25vw;
         }
+        .title01{
+            display: flex;
+            width: 30vw;
+            font-family: fangzheng, sans-serif;
+            font-size: 2vw;
+            margin-left: 40vw;
+        }
+        .title_img1{
+            width: 3.5vw;
+            
+        }
+        .title_img2{
+            width: 3.5vw;
+        }
+        .text1{
+            width: max-content;
+            font-size: 2vw;
+            margin-top: 1.5vw;
+        }
+        .xuewei{
+            display: flex;
+            margin-top: 1vw;
+            margin-left: 1.5vw;
+        }
+        .xuewei img{
+            width: 30vw;
+        }
+        .img1,.img2{
+            margin-right: 2vw;
+        }
+
     </style>
 </head>
 <body>
@@ -101,27 +150,34 @@
         </div>
     </header>
     <main>
-        <div><video class="v1" controls poster="images/video-poster.png">
+        <div class="video01"><video class="v1" controls poster="images/video-poster.png">
             <source src="images/video.mp4" type="video/mp4">
             <!-- 如果需要支持其他格式，可以添加其他<source>标签 -->
         </video></div>
         <div class="tips">
             <ul>
-                tips:
-                <li>1. 定时休息： 长时间注视电脑、手机或其他屏幕可能导致眼睛疲劳和干涩。
+                <li class="tips_title">保护眼睛tips:</li>
+                <li class="tips_content">1. 定时休息： 长时间注视电脑、手机或其他屏幕可能导致眼睛疲劳和干涩。
                     每隔一段时间，比如每小时休息5-10分钟，让眼睛得到放松。</li>
-                <li>2. 20-20-20法则： 每20分钟，注视远处至少20秒钟，这可以帮助减轻眼睛的紧张和疲劳。</li>
-                <li>3. 调整屏幕亮度和对比度： 适当调整屏幕的亮度和对比度，使其不至于对眼睛造成过大的刺激。</li>
+                <li class="tips_content">2. 20-20-20法则： 每20分钟，注视远处至少20秒钟，这可以帮助减轻眼睛的紧张和疲劳。</li>
+                <li class="tips_content">3. 调整屏幕亮度和对比度： 适当调整屏幕的亮度和对比度，使其不至于对眼睛造成过大的刺激。</li>
+                <li class="tips_content">4. 保持良好的姿势： 保持正确的坐姿，确保眼睛与屏幕的距离适当，通常建议与屏幕保持一臂距离。</li>
+                <li class="tips_content">5. 使用护目镜： 长时间使用电脑或其他屏幕时，考虑佩戴护目镜，以减少眩光和蓝光对眼睛的影响。</li>
+                <li class="tips_content">6. 补充眼部营养： 摄取富含维生素A、C、E和Omega-3脂肪酸等营养素的食物，有助于保护眼睛健康。</li>
+                <li class="tips_content">7. 保持适当的睡眠： 充足的睡眠有助于眼睛恢复和修复，保持良好的视觉健康。</li>
+                <li class="tips_content">8. 定期眼部检查： 定期进行眼部检查，及时发现并治疗任何潜在的眼部问题。</li>
             </ul>
         </div>
         </main>
-        <div>
-            <img src="images/kepu1.1.png" />
-            眼部穴位科普images/kepu1.1.png
-            <img src="images/kepu1.2.png" />
-            <img src="images/xuewei1.jpg" />
-            <img src="images/xuewei2.jpg" />
-            <img src="images/xuewei3.jpg" />
-        </div>            
+        <div class="title01">
+            <img class="title_img1" src="images/kepu1.1.png" />
+            <div class="text1">眼部穴位科普</div>
+            <img class="title_img2" src="images/kepu1.2.png" />
+        </div>
+        <div class="xuewei">
+            <img class="img1" src="images/xuewei1.jpg" />
+            <img class="img2" src="images/xuewei2.jpg" />
+            <img class="img3" src="images/xuewei3.jpg" />
+        </div>           
 </body>
 </html>
