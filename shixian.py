@@ -32,4 +32,4 @@ def predict(file_path):
     prediction = '病变' if pred[0][1] > pred[0][0] else '正常'
     #prediction2 = '病变' if pred2[0][1] > pred2[0][0] else '正常'
     
-    return { prediction}
+    return prediction

@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = 'static/uploads'  # 修改上传文件夹路径
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
@@ -15,7 +15,7 @@ def index():
 def upload_file():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'})
-
+    
     file = request.files['file']
 
     if file.filename == '':
@@ -27,8 +27,10 @@ def upload_file():
 
     # 调用图片分析函数
     result = predict(file_path)
+    formatted_result = f"结果: {result}"
+    return render_template('result.html', prediction=formatted_result, file_path=file_path)
 
-    return render_template('result.html', prediction=result)
+@app.route('/upload', methods=['GET'])
+def upload_form():
+    return render_template('upload.html')
 
-if __name__ == '__main__':
-    app.run(debug=True, port=int(os.environ.get('PORT', 5000)))

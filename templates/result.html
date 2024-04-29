@@ -7,7 +7,7 @@
     <title>示例</title>
     <style>        
         body{ 
-            background-image: url('images/background1.jpg');
+            background-image: url('/static/background1.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;   
@@ -41,7 +41,7 @@
      }
      @font-face {
             font-family: 'fangzheng';
-            src: url('images/fangzheng.TTF') format('truetype');
+            src: url('/static/fangzheng.TTF') format('truetype');
         }
     .nav-item a {
         display: block;    
@@ -129,7 +129,7 @@
         margin-top: 0.5vw;
         margin-left: 30vw;
         margin-right: 5vw;
-        font-size: 1.3vw;
+        font-size: 1.8vw;
         color: rgb(0, 0, 0);
         font-family: fangzheng, sans-serif;
     }
@@ -137,18 +137,19 @@
         width: 15vw;
         height: 3vw;
         z-index: 6;
+        margin-top: 1.5vw;
         margin-left: 36vw;
-        font-size: 1.2vw;
-        color: rgb(0, 0, 0);
+        font-size: 1.6vw;
+        color: rgb(255, 0, 0);
         font-family: fangzheng, sans-serif;
     }
     </style>
 </head>
 <body>
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
         <header>
             
-            <img src="../templates/images/logo.png" alt="Logo" id="logo">
+            <img src="/static/EYEOCT.png" alt="Logo" id="logo">
             <div id="navbar">
                 <table style="width: 60vw;">
                     <td class="nav-item" style="width: 5vw;">
@@ -171,13 +172,12 @@
     </div>
 </header>
 <main>
-    <div id="hover-image"> <img src="../templates/images/mark.png"></div>
+    <div id="hover-image"> <img src="/static/mark.png"></div>
 </main>
 <div class="example1">
     <div class="ex1">
         
-        <img src="images/N0088.jpg"/><br/>
-        <h1 class="bt1">结果显示</h1>
+        <img src="{{ url_for('static', filename='uploads/V0003.jpg') }}" alt="Uploaded Image"><br/>
         <p class="bt2">{{ prediction }}</p>
     
     </div>

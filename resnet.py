@@ -32,21 +32,21 @@ for i, t in enumerate('PHN'):
 
 
 x_p, x_np = [], []
-for i in range(1, 400):
+for i in range(1, 200):
     try:
         x = Image.open('PALM-Training400/H%04d.jpg'%i)
         x = np.array( x.resize((224,224)) )
         x_np.append(x)
     except:
         break 
-for i in range(1, 400):
+for i in range(1, 200):
     try:
         x = Image.open('PALM-Training400/P%04d.jpg'%i)
         x = np.array( x.resize((224,224)) )
         x_p.append(x)
     except:
         break 
-for i in range(1, 400):
+for i in range(1, 200):
     try:
         x = Image.open('PALM-Training400/N%04d.jpg'%i)
         x = np.array( x.resize((224,224)) )
