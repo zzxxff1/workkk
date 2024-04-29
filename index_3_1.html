@@ -151,7 +151,7 @@
                     </td>
                     <td class="nav-item" style="width: 5vw;">
                         
-                        <a href="https://zzxxff1.github.io/workkk/eg.html">数据</a>
+                        <a href="https://zzxxff1.github.io/workkk/data_1_1.html">数据</a>
                     </td>
                     <td class="nav-item" style="width: 5vw;">
                         <a href="https://zzxxff1.github.io/workkk/index_2_1.html">病例</a>
@@ -197,24 +197,6 @@
             </div>
 
         </div>
-        
-    
-    
-    
-    <script>
-        function resetNavItem(index) {
-            var hoverImage = document.getElementById('hover-image');
-            hoverImage.style.display = 'none';
-        }
-        function hoverNavItem(index) {
-            var navItems = document.getElementsByClassName('nav-item');
-            var hoverImage = document.getElementById('hover-image');
-            var targetNavItem = navItems[index].getElementsByTagName('a')[0];
-            var targetPosition = targetNavItem.getBoundingClientRect();
-            hoverImage.style.top = (targetPosition.top - 120) + 'px'; // 自定义悬停图片的位置
-            hoverImage.style.left = (targetPosition.left + (targetPosition.width / 2) - 50) + 'px'; // 自定义悬停图片的位置
-            hoverImage.style.display = 'block';
-        }
-    </script>
+
 </body>
 </html>
